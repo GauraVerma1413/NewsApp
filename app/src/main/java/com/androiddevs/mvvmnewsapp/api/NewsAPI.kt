@@ -1,6 +1,6 @@
 package com.androiddevs.mvvmnewsapp.api
 
-import com.androiddevs.mvvmnewsapp.models.ResponseObject
+import com.androiddevs.mvvmnewsapp.models.NewsResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.androiddevs.mvvmnewsapp.utils.Constants.Companion.API_KEY
@@ -16,7 +16,7 @@ interface NewsAPI {
         pageNumber:Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ) : Response<ResponseObject>
+    ) : Response<NewsResponse>
 
     @GET("v2/everything")
     suspend fun searchForNews(
@@ -26,5 +26,5 @@ interface NewsAPI {
         pageNumber : Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ) : Response<ResponseObject>
+    ) : Response<NewsResponse>
 }
