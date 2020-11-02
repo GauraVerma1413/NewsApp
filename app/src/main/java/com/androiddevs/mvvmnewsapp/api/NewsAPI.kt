@@ -1,17 +1,17 @@
 package com.androiddevs.mvvmnewsapp.api
 
 import com.androiddevs.mvvmnewsapp.models.NewsResponse
+import com.androiddevs.mvvmnewsapp.util.Constants.Companion.API_KEY
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
-import com.androiddevs.mvvmnewsapp.utils.Constants.Companion.API_KEY
-import retrofit2.Response
 
 interface NewsAPI {
 
     @GET("v2/top-headlines")
     suspend fun getBreakingNews(
-        @Query("Country")
-        CountryCode : String = "us",
+        @Query("country")
+        countryCode : String = "us",
         @Query("page")
         pageNumber:Int = 1,
         @Query("apiKey")

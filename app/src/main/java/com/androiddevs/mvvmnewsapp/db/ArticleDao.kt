@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.database
+package com.androiddevs.mvvmnewsapp.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
